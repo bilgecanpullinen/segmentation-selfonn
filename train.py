@@ -100,7 +100,7 @@ def train(segmentation_module, iterator, optimizers, history, epoch, cfg, iterat
             best_loss = val_loss.data.item()
         ave_total_val_loss.update(val_loss.data.item())
         ave_val_acc.update(val_acc.data.item()*100)
-        sys.stdout = open("selfonnet18-q3.txt", "a+")
+        sys.stdout = open("model_training.txt", "a+")
         # calculate accuracy, and display
         if ((i) % cfg.TRAIN.disp_iter) == 0:
             print('Epoch: [{}][{}/{}], Time: {:.2f}, Data: {:.2f}, '

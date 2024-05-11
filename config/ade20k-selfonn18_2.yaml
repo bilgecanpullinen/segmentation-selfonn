@@ -1,8 +1,8 @@
 DATASET:
-  root_dataset: "/home/rdbica/narvi-home/semantic-segmentation-pytorch/data/"
-  list_train: "/home/rdbica/narvi-home/semantic-segmentation-pytorch/data/ADEChallengeData2016/train_90.odgt"
-  list_val: "/home/rdbica/narvi-home/semantic-segmentation-pytorch/data/ADEChallengeData2016/validation.odgt"
-  list_validation: "/home/rdbica/narvi-home/semantic-segmentation-pytorch/data/ADEChallengeData2016/valid_10.odgt"
+  root_dataset: "./data/"
+  list_train: "./data/ADEChallengeData2016/train_90.odgt"
+  list_val: "./data/ADEChallengeData2016/validation.odgt"
+  list_validation: "./data/ADEChallengeData2016/valid_10.odgt"
 
   num_class: 150
   imgSizes: (300, 375, 450, 525, 600)
@@ -42,4 +42,4 @@ TEST:
   checkpoint: "epoch_10.pth"
   result: "./"
 
-DIR: "/scratch/rdbica/ckpt/selfonn18-c2"
+DIR: "./ckpt/selfonn18-c2"

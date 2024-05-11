@@ -56,7 +56,7 @@ def ConfusionMatrix(pre_mask, gt_mask, num_classes):
     return confusion_matrix
 
 conf_m = torch.zeros(150,150) # classes (object or no-object)
-colors = loadmat('/scratch/project_2006356/data/color150.mat')['colors']
+colors = loadmat('./data/color150.mat')['colors']
 
 
 def visualize_result(data, pred, dir_result):

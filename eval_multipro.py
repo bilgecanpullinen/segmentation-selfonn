@@ -24,7 +24,7 @@ import seaborn as sn
 import matplotlib.pyplot as plt
 import time
 
-colors = loadmat('data/color150.mat')['colors']
+colors = loadmat('./data/color150.mat')['colors']
 sys.stdout = open("acc.txt", "w+")
 
 
