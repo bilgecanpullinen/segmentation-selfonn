@@ -1,0 +1,45 @@
+DATASET:
+  root_dataset: "/scratch/project_2006356/data/"
+  list_train: "/scratch/project_2006356/data/train_90.odgt"
+  list_val: "/scratch/project_2006356/data/validation.odgt"
+  list_validation: "/scratch/project_2006356/data/valid_10.odgt"
+
+  num_class: 150
+  imgSizes: (300, 375, 450, 525, 600)
+  imgMaxSize: 1000
+  padding_constant: 8
+  segm_downsampling_rate: 8
+  random_flip: True
+
+MODEL:
+  arch_encoder: "cnn5"
+  arch_decoder: "c1"
+  fc_dim: 512
+
+TRAIN:
+  batch_size_per_gpu: 4
+  num_epoch: 300
+  start_epoch: 0
+  epoch_iters: 1515
+  optim: "SGD"
+  lr_encoder: 0.005
+  lr_decoder: 0.005
+  lr_pow: 0.9
+  lr_step: 0
+  beta1: 0.9
+  weight_decay: 0.0001
+  deep_sup_scale: 0.4
+  fix_bn: False
+  workers: 3
+  disp_iter: 20
+  seed: 304
+
+VAL:
+  visualize: True
+  checkpoint: "epoch_300.pth"
+
+TEST:
+  checkpoint: "epoch_10.pth"
+  result: "./"
+
+DIR: "/scratch/project_2006356/ckpt/"
